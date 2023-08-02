@@ -1,0 +1,126 @@
+ 
+ body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f6fb;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.quiz-container {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-20px);
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.question-container {
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInRight 0.5s forwards;
+}
+
+@keyframes fadeInRight {
+    to {
+        opacity: 1;
+    }
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    transition: background-color 0.2s ease;
+}
+
+label:hover {
+    background-color: #ebebeb;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    opacity: 0;
+    animation: fadeInLeft 0.5s forwards;
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+    }
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result-container {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    display: none;
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards;
+}
+
+.restart-btn {
+    background-color: #00a000;
+    margin-top: 20px;
+    padding: 12px 20px;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.restart-btn:hover {
+    background-color: #008800;
+}
+
+.hide {
+    display: none;
+}
+#timer-container {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
